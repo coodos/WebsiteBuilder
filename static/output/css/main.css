@@ -1,0 +1,127 @@
+
+
+.topBar {
+    width: 100%;
+    height: 30px;
+    padding: 15px;
+    background-image: linear-gradient(to bottom right, #3d3d3d, #5d5d5d);
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+    
+
+.main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 800px;
+    background: url('../imgs/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main h1 {
+    padding-top: 330px;
+    margin-top: 0;
+    text-align: center;
+    width: 60%;
+    font-size: 100px;
+    margin-left: 20%;
+    object-fit: cover;
+    color: white;
+}
+
+
+.about {
+    padding: 40px;
+    background-color: #f5f5f5;
+    width: 100%;
+}
+
+.about p {
+    width: 70%;
+    text-align: justify;
+    margin-left: 15%;
+}
+
+.about h1 {
+    width: 80%;
+    margin-left: 15%;
+    font-size: 60px;
+}    
+
+
+.features {
+    width: 100%;
+    padding: 40px 1%;
+    height: 95vh;
+    background-color: #d3d3d3;
+}
+
+.feature {
+    width: 21.5%;
+    float: left;
+    margin: 30px 0.5%;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    height: 70vh;
+    padding: 4% 5%;
+}
+
+    
+.contact {
+    width: 100%;
+    padding: 50px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.contact input[type=text] {
+    width: 70%;
+    padding: 8px;
+    margin: 5px;
+    margin-left: 10%;
+}
+
+.contact textarea {
+    width: 70%;
+    padding: 8px;
+    margin: 5px;
+    margin-left: 10%;
+}
+
+.contact h1 {
+    font-size: 80px;
+    margin-left: 10%;
+}
+
+.btn {
+    width: 71.5%;
+    margin: 15px 10%;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(0, 168, 235), rgb(99, 99, 250));
+    border: none;
+    border-radius: 5px;
+}
+    
+.footer {
+    width: 100%;
+    height: 30px;
+    padding: 15px;
+    background-image: linear-gradient(to bottom right, #3d3d3d, #5d5d5d);
+    text-align: center;
+    color: white;
+    font-size: 23px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .feature {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+    

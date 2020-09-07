@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <title>Index</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Website Builder</h1>    
+    </div>
+
+    <iframe src="{{ url_for('static', filename='output/index.html') }}" frameborder="0" class="preview"></iframe>
+
+    <div class="buttons">
+        <button id="newElement">
+            + Element
+        </button>
+        <a href="../static/output/index.html">
+            <button id="saveWebsite">
+                Open Website
+            </button>
+        </a>
+    </div>
+
+    <iframe id="dummyFrame" name="dummyFrame" style="display: none;"></iframe>
+
+    <div class="popup" id="pop">
+        <button id="popupClose" class="close">Close X</button><br>
+        <select name="element" id="elemSelect" class="select">
+            <option value="header">Header</option>
+            <option value="main">Main</option>
+            <option value="about">About Us</option>
+            <option value="features">Features</option>
+            <option value="contact">Contact Us</option>
+            <option value="footer">Footer</option>
+        </select>
+        <button class="btn" id="createElement">Add</button>
+    </div>
+
+    <div class="headerPopup popup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/addElement" method="POST">
+            <input type="text" name="queryData" placeholder="Header Title">
+            <input type="text" name="type" value="topBar" style="display: none;">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+
+    <div class="mainPopup popup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/addElement" method="POST">
+            <input type="text" name="queryData" placeholder="Main Div Text">
+            <input type="text" name="type" value="main" style="display: none;">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+
+    <div class="aboutPopup popup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/addElement" method="POST">
+            <input type="text" name="queryData" placeholder="Data to display in about">
+            <input type="text" name="type" value="about" style="display: none;">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+
+    <div class="featuresPopup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/features" method="POST">
+            <input type="text" name="one" placeholder="One">
+            <input type="text" name="two" placeholder="Two">
+            <input type="text" name="type" value="features" style="display: none;">
+            <input type="text" name="three" placeholder="Three">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+
+    <div class="contactPopup popup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/addElement" method="POST">
+            <input type="text" name="queryData" placeholder="email to send data to">
+            <input type="text" name="type" value="contact" style="display: none;">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+
+    <div class="footerPopup popup">
+        <button id="popupClose" class="close">Close X</button><br>
+        <form target="dummyFrame" action="/addElement" method="POST">
+            <input type="text" name="queryData" placeholder="footer text">
+            <input type="text" name="type" value="footer" style="display: none;">
+            <input type="submit" value="confirm" class="btn">
+        </form>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/index.js') }}" defer></script>
+</body>
+</html>
