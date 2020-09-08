@@ -16,5 +16,5 @@ this is a project I made for school
    
       `source env/bin/activate.ps1`
       
-4. python3 app.py
+4. `python3 app.py`
 5. visit localhost:5000 
