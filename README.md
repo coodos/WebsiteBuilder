@@ -9,9 +9,12 @@ this is a project I made for school
 3. initiate the virtualenv by running
 
    a. For Mac/Linux
+   
       `source env/bin/active`
 
    b. For Windows
+   
       `source env/bin/activate.ps1`
+      
 4. python3 app.py
 5. visit localhost:5000 
