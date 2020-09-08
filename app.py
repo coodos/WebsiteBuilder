@@ -1,5 +1,6 @@
 # importing dependencies
 from flask import *
+import os
 
 # instantiating a flask app
 app = Flask(__name__, static_folder='static')
@@ -250,6 +251,18 @@ def addThreeStuffDiv():
         html.write(elements[elemType].format(one, two, three))
     with open('static/output/css/main.css', 'a+') as css:
         css.write(styles[elemType])
+
+@app.route('/delete')
+def deleteWebsite():
+    try:
+        os.remove('static/output/index.html')
+    except FileNotFoundError:
+        pass
+    try:
+        os.remove('static/output/css/main.css')
+    except FileNotFoundError:
+        pass
+    return redirect("/")
 
 if __name__ == "__main__":
     app.run(debug=True)

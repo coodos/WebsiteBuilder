@@ -34,14 +34,14 @@ body {
 }
 
 .buttons {
-    width: 30%;
+    width: 45%;
     float: left;
     margin: 0px 0;
-    margin-left: 35%;
+    margin-left: 27.5%;
 }
 
 .buttons button {
-    width: 45%;
+    width: 30%;
     height: 40px;
 
     background-image: linear-gradient(to bottom right, rgb(0, 168, 235), rgb(99, 99, 250));
